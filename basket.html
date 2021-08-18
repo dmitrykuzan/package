@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <style>
+        @font-face {
+            font-family: "Futura Light";
+            font-weight: 300;
+            src: url("assets/fonts/FuturaLightC.eot"); 
+            src: url("assets/fonts/FuturaLightC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaLightC.woff") format("woff"), url("assets/fonts/FuturaLightC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        }
+        
+        @font-face {
+            font-family: "Futura Regular";
+            font-weight: 400;
+            src: url("assets/fonts/FuturaBookC.eot"); 
+            src: url("assets/fonts/FuturaBookC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaBookC.woff") format("woff"), url("assets/fonts/FuturaBookC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        }  
+        
+        @font-face {
+            font-family: "Futura Medium";
+            font-weight: 500;
+            src: url("assets/fonts/FuturaMediumC.eot"); 
+            src: url("assets/fonts/FuturaMediumC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaMediumC.woff") format("woff"), url("assets/fonts/FuturaMediumC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        } 
+        
+        @font-face {
+            font-family: "Futura Semibold";
+            font-weight: 600;
+            src: url("assets/fonts/FuturaDemiC.eot"); 
+            src: url("assets/fonts/FuturaDemiC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaDemiC.woff") format("woff"), url("assets/fonts/FuturaDemiC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        } 
+    </style>
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="content">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="logo" href="/">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__menu_list">
+                            <li><a href="#">Магазин</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Полезная информация</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </nav>
+                    <a class="header__checkout header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#basket"></use>
+                        </svg>
+                    </a>
+                    <a id="user-open" class="header__user header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#user"></use>
+                        </svg>
+                    </a>
+                    <div id="burger" class="burger header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#burger"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <nav id="menu" class="menu">
+            <div class="container">
+                <div class="menu__header header__inner">
+                    <a class="logo" href="/">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
+                    <div id="burger_close" class="menu__close header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="menu__list">
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Полезная информация</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+        </nav>        
+        <main class="body-wrapper">
+            
+            <section class="basket container">
+                <h3 class="basket__title"><span class="line" data-aos="width-after">Корзина</span></h3>
+                <div class="basket__body">
+                    <div class="basket__item">
+                        <div class="basket__img">
+                            <div class="basket__mobile-toggle">
+                                <div>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <img src="assets/img/basket/basket-img.jpg" alt="">
+                        </div>
+                        <div class="basket__content">
+                            <div class="basket__content-top">
+                                <div class="basket__content-name">
+                                    <p class="basket__name-title">Пакет</p>
+                                    <p class="basket__name-cat">Супер категория пакета</p>
+                                </div>
+                                <p class="basket__close-price">600 грн</p>
+                                <a class="basket__delete" href="">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#trash"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="basket__bot-content">
+                                <p class="basket__bot-desk">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis nam eget fames venenatis amet arcu. Ipsum sollicitudin elit gravida dolor, nec elementum iaculis. Varius consectetur eu risus vel id aliquam sed sollicitudin quis. Eu id a porttitor sit vitae amet mauris.</p>
+                                <div class="basket__option">
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Размер</p>
+                                        <p class="basket__option-text">120 x 120 x 120 мм</p>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Материал</p>
+                                        <p class="basket__option-text">Крафт 300 г</p>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Покрытие</p>
+                                        <p class="basket__option-text">Без покрытия</p>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Основа</p>
+                                        <div class="basket__option-color"></div>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Логотип</p>
+                                        <p class="basket__option-text">Без изображения</p>
+                                    </div>
+                                </div>
+                                <p class="basket__price">600 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__item">
+                        <div class="basket__img">
+                            <div class="basket__mobile-toggle">
+                                <div>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <img src="assets/img/basket/basket-img.jpg" alt="">
+                        </div>
+                        <div class="basket__content">
+                            <div class="basket__content-top">
+                                <div class="basket__content-name">
+                                    <p class="basket__name-title">Пакет</p>
+                                    <p class="basket__name-cat">Супер категория пакета</p>
+                                </div>
+                                <p class="basket__close-price">600 грн</p>
+                                <a class="basket__delete" href="">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#trash"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="basket__bot-content">
+                                <p class="basket__bot-desk">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis nam eget fames venenatis amet arcu. Ipsum sollicitudin elit gravida dolor, nec elementum iaculis. Varius consectetur eu risus vel id aliquam sed sollicitudin quis. Eu id a porttitor sit vitae amet mauris.</p>
+                                <div class="basket__option">
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Размер</p>
+                                        <p class="basket__option-text">120 x 120 x 120 мм</p>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Материал</p>
+                                        <p class="basket__option-text">Крафт 300 г</p>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Покрытие</p>
+                                        <p class="basket__option-text">Без покрытия</p>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Основа</p>
+                                        <div class="basket__option-color"></div>
+                                    </div>
+                                    <div class="basket__option-item">
+                                        <p class="basket__option-name">Логотип</p>
+                                        <p class="basket__option-text">Без изображения</p>
+                                    </div>
+                                </div>
+                                <p class="basket__price">600 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__payment">
+                    <a class="basket__clean" href="">Очистить корзину</a>
+                    <p class="basket__total-price">1 800 грн</p>
+                    <a class="basket__order" href="">Оформить заказ</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer container">
+            <div class="footer__wrapper-left">
+                <div class="footer__inner">
+                    <div class="footer__wrapper">
+                        <p class="footer__title">Запросы по продажам и коммерческим предложениям</p>
+                        <a class="footer__text footer__link" href="mailto:email@mail.com">email@mail.com</a>
+                    </div>
+                    <div class="footer__wrapper">
+                        <p class="footer__title">Общие запросы</p>
+                        <a class="footer__text footer__link" href="mailto:email@mail.com">email@mail.com</a>
+                    </div>
+                </div>
+                <div class="footer__wrapper">
+                    <p class="footer__title">Колл-центр</p>
+                    <a class="footer__text footer__link" href="tel:+380 (99) 999 99 99">+380 (99) 999 99 99</a>
+                    <p class="footer__text">Понедельник - Пятница</p>
+                    <p class="footer__text">09:00 - 18:00</p>
+                </div>
+                <div class="footer__wrapper">
+                    <p class="footer__title social__title">Мы в социальных сетях</p>
+                    <a class="footer__text footer__link footer__social-link" href="#">
+                        <svg><use xlink:href="assets/img/sprite.svg#facebook"></use></svg>
+                        supernickname
+                    </a>
+                    <a class="footer__text footer__link footer__social-link" href="#">
+                        <svg><use xlink:href="assets/img/sprite.svg#instagram"></use></svg>
+                        supernickname
+                    </a>
+                </div>
+            </div>
+        
+            <div class="footer__menu">
+                <div class="footer__shop">
+                    <p class="footer__shop-title">Магазин</p>
+                    <ul>
+                        <li class="footer__menu-item">Конструктор</li>
+                        <li class="footer__menu-item">Категория пакетов 1</li>
+                        <li class="footer__menu-item">Категория пакетов 2</li>
+                        <li class="footer__menu-item">Категория пакетов 3</li>
+                        <li class="footer__menu-item">Категория пакетов 4</li>
+                    </ul>
+                </div>
+                <div class="footer__other">
+                    <p class="footer__other-title">Другое</p>
+                    <ul>
+                        <li class="footer__menu-item">Про компанию</li>
+                        <li class="footer__menu-item">Контакты</li>
+                        <li class="footer__menu-item">Часто задаваемые вопросы</li>
+                        <li class="footer__menu-item">Блог</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>    </div>
+    <section id="modal" class="modal">
+        <div class="modal__header container">
+            <a class="logo" href="">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+            <div id="close-btn" class="modal__header-close">
+                <svg>
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="modal__wrapper modal__wrapper--newuser">
+        <!-- Первый Экран -->
+            <div class="modal__body">
+                <div id="register" class="modal__body-register">
+                    <div class="modal__body-register-text">
+                        <h2 class="modal__body-register-text-title"><span class="line aos-init aos-animate" data-aos="width-after">Зарегистрируйтесь</span> для истории заказов</h2>
+                        <p class="modal__body-register-text-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sollicitudin sed natoque id morbi. Dictum habitant morbi in sapien metus. Aliquet id orci id at nec. Nisi, consequat nisi, vel felis proin molestie dignissim aliquam quam.</p>
+                    </div>
+                    <div class="modal__body-register-link">
+                        <a id="button-reg" class="modal__body-register-link-reg" href="#">Регистрация</a>
+                        <a id="button-have" class="modal__body-register-link-have" href="#">Уже есть аккаунт</a>
+                    </div>
+                </div>
+            <!-- Регистр. Нового Пользователя -->
+                <div id="newuser" class="modal__body-newuser">
+                    <h2 class="modal__body-newuser-title">Регистрация нового пользователя</h2>
+                    <!-- Форма -->
+                    <form class="modal__body-newuser-form">
+                        <!-- Имя Фамилия -->
+                        <div class="modal__body-newuser-form-name">
+                            <div>   
+                                <h4 class="modal__body-newuser-form-title">Имя</h4>
+                                <input class="modal__body-newuser-form-input" type="text" placeholder="Игорь" name="username"> 
+                            </div>
+                            <div>
+                                <h4 class="modal__body-newuser-form-title">Фамилия</h4>
+                                <input class="modal__body-newuser-form-input" type="text" placeholder="Иванов" name="username">
+                            </div>
+                        </div>
+                        <!-- Эмейл -->
+                        <div class="modal__body-newuser-form-mail">
+                            <h4 class="modal__body-newuser-form-title">Почта</h4>
+                            <input class="modal__body-newuser-form-input" type="email" placeholder="mail@gmail.com" name="email">  
+                        </div>
+                        <!-- Телефон -->
+                        <div class="modal__body-newuser-form-number">
+                            <h4 class="modal__body-newuser-form-title">Номер телефона</h4>
+                            <input class="modal__body-newuser-form-input" type="tel" name="phone" placeholder="+ 380 095 35 35 355">
+                        </div>
+                        <!-- Пароль -->
+                        <div class="modal__body-newuser-form-password">
+                            <h4 class="modal__body-newuser-form-title">Пароль</h4>
+                            <div class="modal__body-newuser-form-password-wrapper">
+                                <input class="modal__body-newuser-form-input" type="password" name="phone" placeholder="password1234">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#eye"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Кнопки -->
+                        <div class="modal__body-newuser-form-buttons">
+                            <!-- Регистрация -->
+                            <input class="modal__body-newuser-form-buttons-reg" type="submit" value="Регистрация">
+                            <!-- Соц. Сети Гугл -->
+                            <div class="modal__body-newuser-form-buttons-wrapper">
+                                <a class="modal__body-newuser-form-buttons-google">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#google"></use>
+                                    </svg>
+                                </a>
+                                <a class="modal__body-newuser-form-buttons-social">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#facebook-solo"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- С Возвращением! -->
+                <div id="comeback" class="modal__body-comeback">
+                    <!-- Заголовки -->
+                    <h3 class="modal__body-comeback-title">С возвращением!</h3>
+                    <p class="modal__body-comeback-subtitle">Мы так рады вас видеть снова</p>
+                    <!-- Форма -->
+                    <form class="modal__body-comeback-form">
+                        <div class="modal__body-comeback-form-mail">
+                            <h4 class="modal__body-comeback-form-title">Почта</h4>
+                            <input class="modal__body-comeback-form-input" type="email" placeholder="mail@gmail.com" name="email">  
+                        </div>
+                        <div class="modal__body-comeback-form-password">
+                            <h4 class="modal__body-newuser-form-title">Пароль</h4>
+                            <div class="modal__body-comeback-form-password-wrapper">
+                                <input class="modal__body-comeback-form-input" type="password" name="phone" placeholder="password1234">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#eye"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="modal__body-comeback-form-buttons">
+                            <!-- Регистрация -->
+                            <input class="modal__body-comeback-form-buttons-reg" type="submit" value="Войти">
+                            <!-- Соц. Сети Гугл -->
+                            <div class="modal__body-comeback-form-buttons-wrapper">
+                                <div class="modal__body-comeback-form-buttons-google">
+                                    <a href=""></a>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#facebook-solo"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal__body-comeback-form-buttons-social">
+                                    <a href=""></a>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#google"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>  <!-- Кнопки -->
+                    </form>
+                </div>     <!-- С Возвращением! -->
+            </div>     <!-- modalbody -->
+        <!-- Картинка -->
+    
+            <div class="modal__wrapper-image">
+                <img src="assets/img/modal/modal.jpg" alt="">
+            </div>
+    
+        </div>  <!-- wrapper -->
+    </section>    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/autosize.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/range.js"></script>
+    <script src="assets/js/app.min.js"></script></body>
+
+</html>

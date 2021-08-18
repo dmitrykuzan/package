@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар</title>
+    <style>
+        @font-face {
+            font-family: "Futura Light";
+            font-weight: 300;
+            src: url("assets/fonts/FuturaLightC.eot"); 
+            src: url("assets/fonts/FuturaLightC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaLightC.woff") format("woff"), url("assets/fonts/FuturaLightC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        }
+        
+        @font-face {
+            font-family: "Futura Regular";
+            font-weight: 400;
+            src: url("assets/fonts/FuturaBookC.eot"); 
+            src: url("assets/fonts/FuturaBookC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaBookC.woff") format("woff"), url("assets/fonts/FuturaBookC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        }  
+        
+        @font-face {
+            font-family: "Futura Medium";
+            font-weight: 500;
+            src: url("assets/fonts/FuturaMediumC.eot"); 
+            src: url("assets/fonts/FuturaMediumC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaMediumC.woff") format("woff"), url("assets/fonts/FuturaMediumC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        } 
+        
+        @font-face {
+            font-family: "Futura Semibold";
+            font-weight: 600;
+            src: url("assets/fonts/FuturaDemiC.eot"); 
+            src: url("assets/fonts/FuturaDemiC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaDemiC.woff") format("woff"), url("assets/fonts/FuturaDemiC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        } 
+    </style>
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="content">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="logo" href="/">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__menu_list">
+                            <li><a href="#">Магазин</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Полезная информация</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </nav>
+                    <a class="header__checkout header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#basket"></use>
+                        </svg>
+                    </a>
+                    <a id="user-open" class="header__user header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#user"></use>
+                        </svg>
+                    </a>
+                    <div id="burger" class="burger header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#burger"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <nav id="menu" class="menu">
+            <div class="container">
+                <div class="menu__header header__inner">
+                    <a class="logo" href="/">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
+                    <div id="burger_close" class="menu__close header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="menu__list">
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Полезная информация</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+        </nav>        
+        <main class="body-wrapper">
+            
+            <section class="product">
+                <div class="product__name">
+                    <h3 class="product__title container">Название товара</h3>
+                </div>
+                    <div class="product__wrapper">
+                        <div class="product__description">
+                            <div class="product__title-wrap">
+                                <p class="product__description-title active">Описание товара</p>
+                                <p class="product__testimonials-title">Отзывы</p>
+                            </div>
+                            <p class="product__description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sagittis cursus dictum rhoncus. Orci eros porttitor amet feugiat velit. Leo sit non et faucibus ultrices lacus. Pellentesque vel turpis fermentum sit suspendisse. Vulputate sed integer duis quisque quam. Adipiscing sagittis tristique blandit orci fermentum. </p>
+                            <form class="product__form">
+                                <div class="product__item">
+                                    <p class="product__item-title">Размер</p>
+                                    <div class="product__item-wrap">
+                                        <div class="product__button-wrap">
+                                            <button class="product__button">180 х 190 х 200 мм</button>
+                                                <svg>
+                                                    <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <p class="product__item-title">Материал</p>
+                                    <div class="product__item-wrap">
+                                        <div class="product__button-wrap">
+                                            <button class="product__button">Крафт-бумага 300 г</button>
+                                            <svg>
+                                                <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__items">
+                                            <p>Крафт-бумага 400 г</p>
+                                            <p>Крафт-бумага 500 г</p>
+                                            <p>Крафт-бумага 600 г</p>
+                                            <p>Крафт-бумага 600 г</p>
+                                            <p>Крафт-бумага 600 г</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <p class="product__item-title">Покрытие</p>
+                                    <div class="product__item-wrap">
+                                        <div class="product__button-wrap">
+                                            <button class="product__button">Без покрытия</button>
+                                            <svg>
+                                                <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__items">
+                                            <p class="product__items-item">Глянец</p>
+                                            <p class="product__items-item">Матовое покрытие</p>
+                                            <p class="product__items-item">Лакированное покрытие</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item">
+                                    <p class="product__item-title">Цвет</p>
+                                    <div class="product__items-colors product__item-wrap">
+                                        <label class="product__item-color">
+                                            <input type="radio" name="color" checked>
+                                                <span class="white color checked" style="background: #fff; border: 0.5px solid #000;">
+                                                </span>
+                                        </label>
+                                        <label class="product__item-color">
+                                            <input type="radio" name="color" checked>
+                                                <span class="tomato color" style="background: #FF8484;"> 
+                                                </span>
+                                        </label>
+                                        <label class="product__item-color">
+                                            <input type="radio" name="color" checked>
+                                                <span class="green color" style="background: #72EC7E;"> 
+                                                </span>
+                                        </label>
+                                        <label class="product__item-color">
+                                            <input type="radio" name="color" checked>
+                                                <span class="blue color" style="background: #6AA6FF;">
+                                                </span>
+                                        </label>
+                                        <label class="product__item-color">
+                                            <input type="radio" name="color" checked>
+                                                <span class="black color" style="background: #000;">   
+                                                </span>
+                                        </label>
+                                        <a class="product__color-all product__button-wrap" href="#">
+                                            <svg>
+                                                <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                                            </svg>
+                                        </a>
+                                        <div class="product__items product__inner-color">
+                                            <div class="product__items-colors product__item-wrap">
+                                                <label class="product__item-color">
+                                                    <input type="radio" name="color" checked>
+                                                        <span class="white color checked" style="background: #fff; border: 0.5px solid #000;">
+                                                        </span>
+                                                </label>
+                                                <label class="product__item-color">
+                                                    <input type="radio" name="color" checked>
+                                                        <span class="tomato color" style="background: #FF8484;"> 
+                                                        </span>
+                                                </label>
+                                                <label class="product__item-color">
+                                                    <input type="radio" name="color" checked>
+                                                        <span class="green color" style="background: #72EC7E;"> 
+                                                        </span>
+                                                </label>
+                                                <label class="product__item-color">
+                                                    <input type="radio" name="color" checked>
+                                                        <span class="blue color" style="background: #6AA6FF;">
+                                                        </span>
+                                                </label>
+                                                <label class="product__item-color">
+                                                    <input type="radio" name="color" checked>
+                                                        <span class="black color" style="background: #000;">   
+                                                        </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item-layout">
+                                    <p class="product__item-title">Макет</p>
+                                    <a class="product__layout-link" href="">Как работать с макетом?</a>
+                                </div>
+                                <div class="product__item-download">
+                                    <a class="product__download-button" download="" href="">Скачать развертку</a>
+                                    <div class="product__load-wrap">
+                                        <label class="product__load-button"><span>Загрузить макет</span>
+                                            <input type="file" value="Загрузить макет" multiple>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="product__item payment-wrap">
+                                    <p class="product__item-title">Стоимость</p>
+                                    <div class="product__item-wrap payment">
+                                        <div class="product__button-wrap payment-button">
+                                            <button class="product__button">Количество</button>
+                                            <svg>
+                                                <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="product__items product__payment-items">
+                                            <p class="product__items-item">Глянец</p>
+                                            <p class="product__items-item">Матовое покрытие</p>
+                                            <p class="product__items-item">Лакированное покрытие</p>
+                                        </div>
+            
+                                        <p class="product__price">90 грн</p>
+                                    </div>
+                                </div>
+                                <div class="product__submit-wrapper">
+                                    <input class="product__submit" type="submit" value="Добавить в корзину">
+                                    <input class="product__submit-click" type="submit" value="Купить в один клик">
+                                </div>
+                            </form>
+                            </div>
+                            <!-- Отзывы -->
+                            <div class="product__testimonials">
+                                <div class="product__title-wrap">
+                                    <p class="product__description-title">Описание товара</p>
+                                    <p class="product__testimonials-title active">Отзывы</p>
+                                </div>
+                                <div class="product__toogle-wrap">
+                                    <div class="product__testimonials-body">
+                                        <div class="product__testimonials-item">
+                                            <div class="product__testimonials-title">
+                                                <div>
+                                                    <p class="product__testimonials-name">Богдан Богданов</p>
+                                                    <p class="product__testimonials-date">Опубликовано 26.10.2020</p>
+                                                </div>
+                                                <div class="product__testimonials-stars stars">
+                                                    <a href="" class="product__star-full star-full">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product__star-full star-full">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product__star-full star-full">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product__star-half star-half">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M3.73387 15.8587L8.15737 14.1337V1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587Z" fill="#3E67FB"/>
+                                                            <path d="M8.15737 1L10.807 5.23332L15.3147 6.67552L12.4446 10.734L12.5809 15.8587L8.15737 14.1337M8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337M8.15737 1V14.1337" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>  
+                                                    </a>
+                                                    <a href="" class="product__star-blank star-blank">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <p class="product__testimonials-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis ut morbi feugiat erat. Commodo justo lorem at senectus eleifend fringilla non. In neque lorem sed at sit in. Tellus cursus venenatis viverra morbi tristique quam. Integer pellentesque mauris sit risus, donec. Est quam eget euismod nunc. Mauris commodo nisi, cras ridiculus amet. Magna justo ut tempus in convallis id. Commodo vel platea euismod leo. Lobortis in arcu blandit mus etiam nulla lorem sed. Semper morbi vitae aliquet metus congue sapien a vehicula phasellus.</p>
+                                        </div>
+                                        <div class="product__testimonials-item">
+                                            <div class="product__testimonials-title">
+                                                <div>
+                                                    <p class="product__testimonials-name">Богдан Богданов</p>
+                                                    <p class="product__testimonials-date">Опубликовано 26.10.2020</p>
+                                                </div>
+                                                <div class="product__testimonials-stars stars">
+                                                    <a href="" class="product__star-full star-full">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product__star-full star-full">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product__star-full star-full">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product__star-full star-full">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product__star-half star-half">
+                                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M3.73387 15.8587L8.15737 14.1337V1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587Z" fill="#3E67FB"/>
+                                                            <path d="M8.15737 1L10.807 5.23332L15.3147 6.67552L12.4446 10.734L12.5809 15.8587L8.15737 14.1337M8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337M8.15737 1V14.1337" stroke="#3E67FB" stroke-width="0.5"/>
+                                                        </svg>  
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <p class="product__testimonials-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis ut morbi feugiat erat. Commodo justo lorem at senectus eleifend fringilla non. In neque lorem sed at sit in. Tellus cursus venenatis viverra morbi tristique quam. Integer pellentesque mauris sit risus, donec. Est quam eget euismod nunc. Mauris commodo nisi, cras ridiculus amet. Magna justo ut tempus in convallis id. Commodo vel platea euismod leo. Lobortis in arcu blandit mus etiam nulla lorem sed. Semper morbi vitae aliquet metus congue sapien a vehicula phasellus.</p>
+                                        </div>
+                                    </div>
+                                    <a class="product__testimonials-button" href="#">Смотреть все отзывы</a>
+                                </div>
+                                <form>
+                                    <h4 class="product__main-title">Оставить отзыв</h4>
+                                        <p class="product__form-title">Имя</p>
+                                    <div class="product__form-name">
+                                        <input  type="text" placeholder="Игорь, Татьяна">
+                                        <div class="product__stars-input stars">
+                                            <a href="" class="product__star-full star-full">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                </svg>
+                                            </a>
+                                            <a href="" class="product__star-full star-full">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                </svg>
+                                            </a>
+                                            <a href="" class="product__star-full star-full">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                </svg>
+                                            </a>
+                                            <a href="" class="product__star-full star-full">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                </svg>
+                                            </a>
+                                            <a href="" class="product__star-full star-full">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.807 5.23332L8.15737 1L5.50769 5.23332L1 6.67552L3.8701 10.734L3.73387 15.8587L8.15737 14.1337L12.5809 15.8587L12.4446 10.734L15.3147 6.67552L10.807 5.23332Z" fill="#3E67FB" stroke="#3E67FB" stroke-width="0.5"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p class="product__form-title">Отзыв</p>
+                                    <input class="product__form-text" type="textarea" placeholder="Тут вы можете прописать любой отзыв">
+                                    <input class="product__form-sub" type="submit" value="Отправить отзыв">
+                                </form>
+                            </div>
+            
+                            <div class="product__slider swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="product__slide swiper-slide">
+                                        <img src="assets/img/product/product.jpg" alt="">
+                                    </div>
+                                    <div class="product__slide swiper-slide">
+                                        <img src="assets/img/product/product.jpg" alt="">
+                                    </div>
+                                    <div class="product__slide swiper-slide">
+                                        <img src="assets/img/product/product.jpg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="product__navigation">
+                                    <div class="product__pagination"></div>
+                                    <div class="product__next">
+                                        <svg>
+                                            <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </section>
+            
+            
+        </main>
+
+        <footer class="footer container">
+            <div class="footer__wrapper-left">
+                <div class="footer__inner">
+                    <div class="footer__wrapper">
+                        <p class="footer__title">Запросы по продажам и коммерческим предложениям</p>
+                        <a class="footer__text footer__link" href="mailto:email@mail.com">email@mail.com</a>
+                    </div>
+                    <div class="footer__wrapper">
+                        <p class="footer__title">Общие запросы</p>
+                        <a class="footer__text footer__link" href="mailto:email@mail.com">email@mail.com</a>
+                    </div>
+                </div>
+                <div class="footer__wrapper">
+                    <p class="footer__title">Колл-центр</p>
+                    <a class="footer__text footer__link" href="tel:+380 (99) 999 99 99">+380 (99) 999 99 99</a>
+                    <p class="footer__text">Понедельник - Пятница</p>
+                    <p class="footer__text">09:00 - 18:00</p>
+                </div>
+                <div class="footer__wrapper">
+                    <p class="footer__title social__title">Мы в социальных сетях</p>
+                    <a class="footer__text footer__link footer__social-link" href="#">
+                        <svg><use xlink:href="assets/img/sprite.svg#facebook"></use></svg>
+                        supernickname
+                    </a>
+                    <a class="footer__text footer__link footer__social-link" href="#">
+                        <svg><use xlink:href="assets/img/sprite.svg#instagram"></use></svg>
+                        supernickname
+                    </a>
+                </div>
+            </div>
+        
+            <div class="footer__menu">
+                <div class="footer__shop">
+                    <p class="footer__shop-title">Магазин</p>
+                    <ul>
+                        <li class="footer__menu-item">Конструктор</li>
+                        <li class="footer__menu-item">Категория пакетов 1</li>
+                        <li class="footer__menu-item">Категория пакетов 2</li>
+                        <li class="footer__menu-item">Категория пакетов 3</li>
+                        <li class="footer__menu-item">Категория пакетов 4</li>
+                    </ul>
+                </div>
+                <div class="footer__other">
+                    <p class="footer__other-title">Другое</p>
+                    <ul>
+                        <li class="footer__menu-item">Про компанию</li>
+                        <li class="footer__menu-item">Контакты</li>
+                        <li class="footer__menu-item">Часто задаваемые вопросы</li>
+                        <li class="footer__menu-item">Блог</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>    </div>
+    <section id="modal" class="modal">
+        <div class="modal__header container">
+            <a class="logo" href="">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+            <div id="close-btn" class="modal__header-close">
+                <svg>
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="modal__wrapper modal__wrapper--newuser">
+        <!-- Первый Экран -->
+            <div class="modal__body">
+                <div id="register" class="modal__body-register">
+                    <div class="modal__body-register-text">
+                        <h2 class="modal__body-register-text-title"><span class="line aos-init aos-animate" data-aos="width-after">Зарегистрируйтесь</span> для истории заказов</h2>
+                        <p class="modal__body-register-text-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sollicitudin sed natoque id morbi. Dictum habitant morbi in sapien metus. Aliquet id orci id at nec. Nisi, consequat nisi, vel felis proin molestie dignissim aliquam quam.</p>
+                    </div>
+                    <div class="modal__body-register-link">
+                        <a id="button-reg" class="modal__body-register-link-reg" href="#">Регистрация</a>
+                        <a id="button-have" class="modal__body-register-link-have" href="#">Уже есть аккаунт</a>
+                    </div>
+                </div>
+            <!-- Регистр. Нового Пользователя -->
+                <div id="newuser" class="modal__body-newuser">
+                    <h2 class="modal__body-newuser-title">Регистрация нового пользователя</h2>
+                    <!-- Форма -->
+                    <form class="modal__body-newuser-form">
+                        <!-- Имя Фамилия -->
+                        <div class="modal__body-newuser-form-name">
+                            <div>   
+                                <h4 class="modal__body-newuser-form-title">Имя</h4>
+                                <input class="modal__body-newuser-form-input" type="text" placeholder="Игорь" name="username"> 
+                            </div>
+                            <div>
+                                <h4 class="modal__body-newuser-form-title">Фамилия</h4>
+                                <input class="modal__body-newuser-form-input" type="text" placeholder="Иванов" name="username">
+                            </div>
+                        </div>
+                        <!-- Эмейл -->
+                        <div class="modal__body-newuser-form-mail">
+                            <h4 class="modal__body-newuser-form-title">Почта</h4>
+                            <input class="modal__body-newuser-form-input" type="email" placeholder="mail@gmail.com" name="email">  
+                        </div>
+                        <!-- Телефон -->
+                        <div class="modal__body-newuser-form-number">
+                            <h4 class="modal__body-newuser-form-title">Номер телефона</h4>
+                            <input class="modal__body-newuser-form-input" type="tel" name="phone" placeholder="+ 380 095 35 35 355">
+                        </div>
+                        <!-- Пароль -->
+                        <div class="modal__body-newuser-form-password">
+                            <h4 class="modal__body-newuser-form-title">Пароль</h4>
+                            <div class="modal__body-newuser-form-password-wrapper">
+                                <input class="modal__body-newuser-form-input" type="password" name="phone" placeholder="password1234">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#eye"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Кнопки -->
+                        <div class="modal__body-newuser-form-buttons">
+                            <!-- Регистрация -->
+                            <input class="modal__body-newuser-form-buttons-reg" type="submit" value="Регистрация">
+                            <!-- Соц. Сети Гугл -->
+                            <div class="modal__body-newuser-form-buttons-wrapper">
+                                <a class="modal__body-newuser-form-buttons-google">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#google"></use>
+                                    </svg>
+                                </a>
+                                <a class="modal__body-newuser-form-buttons-social">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#facebook-solo"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- С Возвращением! -->
+                <div id="comeback" class="modal__body-comeback">
+                    <!-- Заголовки -->
+                    <h3 class="modal__body-comeback-title">С возвращением!</h3>
+                    <p class="modal__body-comeback-subtitle">Мы так рады вас видеть снова</p>
+                    <!-- Форма -->
+                    <form class="modal__body-comeback-form">
+                        <div class="modal__body-comeback-form-mail">
+                            <h4 class="modal__body-comeback-form-title">Почта</h4>
+                            <input class="modal__body-comeback-form-input" type="email" placeholder="mail@gmail.com" name="email">  
+                        </div>
+                        <div class="modal__body-comeback-form-password">
+                            <h4 class="modal__body-newuser-form-title">Пароль</h4>
+                            <div class="modal__body-comeback-form-password-wrapper">
+                                <input class="modal__body-comeback-form-input" type="password" name="phone" placeholder="password1234">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#eye"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="modal__body-comeback-form-buttons">
+                            <!-- Регистрация -->
+                            <input class="modal__body-comeback-form-buttons-reg" type="submit" value="Войти">
+                            <!-- Соц. Сети Гугл -->
+                            <div class="modal__body-comeback-form-buttons-wrapper">
+                                <div class="modal__body-comeback-form-buttons-google">
+                                    <a href=""></a>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#facebook-solo"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal__body-comeback-form-buttons-social">
+                                    <a href=""></a>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#google"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>  <!-- Кнопки -->
+                    </form>
+                </div>     <!-- С Возвращением! -->
+            </div>     <!-- modalbody -->
+        <!-- Картинка -->
+    
+            <div class="modal__wrapper-image">
+                <img src="assets/img/modal/modal.jpg" alt="">
+            </div>
+    
+        </div>  <!-- wrapper -->
+    </section>    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/autosize.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/range.js"></script>
+    <script src="assets/js/app.min.js"></script></body>
+
+</html>

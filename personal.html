@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <style>
+        @font-face {
+            font-family: "Futura Light";
+            font-weight: 300;
+            src: url("assets/fonts/FuturaLightC.eot"); 
+            src: url("assets/fonts/FuturaLightC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaLightC.woff") format("woff"), url("assets/fonts/FuturaLightC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        }
+        
+        @font-face {
+            font-family: "Futura Regular";
+            font-weight: 400;
+            src: url("assets/fonts/FuturaBookC.eot"); 
+            src: url("assets/fonts/FuturaBookC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaBookC.woff") format("woff"), url("assets/fonts/FuturaBookC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        }  
+        
+        @font-face {
+            font-family: "Futura Medium";
+            font-weight: 500;
+            src: url("assets/fonts/FuturaMediumC.eot"); 
+            src: url("assets/fonts/FuturaMediumC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaMediumC.woff") format("woff"), url("assets/fonts/FuturaMediumC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        } 
+        
+        @font-face {
+            font-family: "Futura Semibold";
+            font-weight: 600;
+            src: url("assets/fonts/FuturaDemiC.eot"); 
+            src: url("assets/fonts/FuturaDemiC.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/FuturaDemiC.woff") format("woff"), url("assets/fonts/FuturaDemiC.ttf") format("truetype"); 
+            font-display: swap;
+            font-style: normal; 
+            font-weight: normal; 
+        } 
+    </style>
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="content">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="logo" href="/">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__menu_list">
+                            <li><a href="#">Магазин</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Полезная информация</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </nav>
+                    <a class="header__checkout header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#basket"></use>
+                        </svg>
+                    </a>
+                    <a id="user-open" class="header__user header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#user"></use>
+                        </svg>
+                    </a>
+                    <div id="burger" class="burger header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#burger"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <nav id="menu" class="menu">
+            <div class="container">
+                <div class="menu__header header__inner">
+                    <a class="logo" href="/">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
+                    <div id="burger_close" class="menu__close header__icon">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="menu__list">
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Полезная информация</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+        </nav>        
+        <main class="body-wrapper">
+            
+            <section class="personal container">
+                <h3 class="personal__title"><span class="line" data-aos="width-after">Личный кабинет</span></h3>
+                <div class="personal__wrapper">
+                    <!-- Имя Фамилия / История заказов -->
+                    <div class="personal__area">
+                        <div class="personal__area-name">
+                            <div class="personal__avatar">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#user"></use>
+                                </svg>
+                            </div>
+                            <p class="personal__nickname">Имя Фамилия</p>
+                        </div>
+                            <span class="personal-line"></span>
+                        <div class="personal__history">
+                            <svg>
+                                <use xlink:href="assets/img/sprite.svg#history"></use>
+                            </svg>
+                            <a class="personal__history-link" href="#">История заказов</a>
+                        </div>
+                    </div>
+                    <!-- Личный кабинет -->
+                    <div class="personal__info">
+                        <p class="personal__hello">Здравствуйте, <span>Имя Фамилия!</span></p>
+                        <div class="personal__item">
+                            <div class="personal__item-text">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#data"></use>
+                                </svg>
+                                <p>Личные данные</p>
+                            </div>
+                            <form class="personal__form"> 
+                                <div class="personal__input">
+                                    <p>Имя</p>
+                                    <input  type="text" placeholder="Игорь">
+                                </div>
+                                <div class="personal__input">
+                                    <p>Фамилия</p>
+                                    <input  type="text" placeholder="Игорь">
+                                </div>
+                                <div class="personal__button-wrapper">
+                                    <input class="personal__button-save" type="submit" value="Сохранить">
+                                    <input class="personal__button-cancel" type="submit" value="Отмена">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="personal__item">
+                            <div class="personal__item-text">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#mail"></use>
+                                </svg>
+                                <p>Контакты</p>
+                            </div>
+                            <form class="personal__form"> 
+                                <div class="personal__input">
+                                    <p>Телефон</p>
+                                    <input  type="tel" name="phone" placeholder="+ 380 095 35 35 355">
+                                </div>
+                                <div class="personal__input">
+                                    <p>Почта</p>
+                                    <input  type="email" placeholder="mail@gmail.com" name="email">
+                                </div>
+                                <div class="personal__button-wrapper">
+                                    <input class="personal__button-save" type="submit" value="Сохранить">
+                                    <input class="personal__button-cancel" type="submit" value="Отмена">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="personal__item">
+                            <div class="personal__item-text">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#pass"></use>
+                                </svg>
+                                <p>Старый пароль</p>
+                            </div>
+                            <form class="personal__form"> 
+                                <div class="personal__input">
+                                    <p>Старый пароль</p>
+                                    <input  type="password" placeholder="password1234">
+                                </div>
+                                <div class="personal__input">
+                                    <p>Новый пароль</p>
+                                    <input  type="password" placeholder="password1234">
+                                </div>
+                                <div class="personal__button-wrapper">
+                                    <input class="personal__button-save" type="submit" value="Сохранить">
+                                    <input class="personal__button-cancel" type="submit" value="Отмена">
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Карточка -->
+                        <div class="personal__item">
+                            <!-- Заголовок Карточка -->
+                            <div class="personal__item-text">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#mail"></use>
+                                </svg>
+                                <p>Оплата</p>
+                            </div>
+                            <!-- Чекбокс с номером -->
+                            <div class="personal__check-wrap">
+                                <div class="personal__number-wrap">
+                                    <div class="personal__number-card">
+                                        <label class="personal__card-check">
+                                            <input type="radio" name="card" checked>
+                                                <span class="personal__radio" style="background: #3E67FB;">
+                                                </span>
+                                        </label>
+                                        <p class="personal__card-hide">**** **** **** 3768</p>
+                                    </div>
+                                    <a class="personal__add-card" href="#">Добавить новую карту</a>
+                                </div>
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#trash"></use>
+                                </svg>
+                            </div>
+                            <input class="personal__button-save" type="submit" value="Сохранить">
+                            <input class="personal__button-cancel" type="submit" value="Отмена">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer container">
+            <div class="footer__wrapper-left">
+                <div class="footer__inner">
+                    <div class="footer__wrapper">
+                        <p class="footer__title">Запросы по продажам и коммерческим предложениям</p>
+                        <a class="footer__text footer__link" href="mailto:email@mail.com">email@mail.com</a>
+                    </div>
+                    <div class="footer__wrapper">
+                        <p class="footer__title">Общие запросы</p>
+                        <a class="footer__text footer__link" href="mailto:email@mail.com">email@mail.com</a>
+                    </div>
+                </div>
+                <div class="footer__wrapper">
+                    <p class="footer__title">Колл-центр</p>
+                    <a class="footer__text footer__link" href="tel:+380 (99) 999 99 99">+380 (99) 999 99 99</a>
+                    <p class="footer__text">Понедельник - Пятница</p>
+                    <p class="footer__text">09:00 - 18:00</p>
+                </div>
+                <div class="footer__wrapper">
+                    <p class="footer__title social__title">Мы в социальных сетях</p>
+                    <a class="footer__text footer__link footer__social-link" href="#">
+                        <svg><use xlink:href="assets/img/sprite.svg#facebook"></use></svg>
+                        supernickname
+                    </a>
+                    <a class="footer__text footer__link footer__social-link" href="#">
+                        <svg><use xlink:href="assets/img/sprite.svg#instagram"></use></svg>
+                        supernickname
+                    </a>
+                </div>
+            </div>
+        
+            <div class="footer__menu">
+                <div class="footer__shop">
+                    <p class="footer__shop-title">Магазин</p>
+                    <ul>
+                        <li class="footer__menu-item">Конструктор</li>
+                        <li class="footer__menu-item">Категория пакетов 1</li>
+                        <li class="footer__menu-item">Категория пакетов 2</li>
+                        <li class="footer__menu-item">Категория пакетов 3</li>
+                        <li class="footer__menu-item">Категория пакетов 4</li>
+                    </ul>
+                </div>
+                <div class="footer__other">
+                    <p class="footer__other-title">Другое</p>
+                    <ul>
+                        <li class="footer__menu-item">Про компанию</li>
+                        <li class="footer__menu-item">Контакты</li>
+                        <li class="footer__menu-item">Часто задаваемые вопросы</li>
+                        <li class="footer__menu-item">Блог</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>    </div>
+    <section id="modal" class="modal">
+        <div class="modal__header container">
+            <a class="logo" href="">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+            <div id="close-btn" class="modal__header-close">
+                <svg>
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="modal__wrapper modal__wrapper--newuser">
+        <!-- Первый Экран -->
+            <div class="modal__body">
+                <div id="register" class="modal__body-register">
+                    <div class="modal__body-register-text">
+                        <h2 class="modal__body-register-text-title"><span class="line aos-init aos-animate" data-aos="width-after">Зарегистрируйтесь</span> для истории заказов</h2>
+                        <p class="modal__body-register-text-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sollicitudin sed natoque id morbi. Dictum habitant morbi in sapien metus. Aliquet id orci id at nec. Nisi, consequat nisi, vel felis proin molestie dignissim aliquam quam.</p>
+                    </div>
+                    <div class="modal__body-register-link">
+                        <a id="button-reg" class="modal__body-register-link-reg" href="#">Регистрация</a>
+                        <a id="button-have" class="modal__body-register-link-have" href="#">Уже есть аккаунт</a>
+                    </div>
+                </div>
+            <!-- Регистр. Нового Пользователя -->
+                <div id="newuser" class="modal__body-newuser">
+                    <h2 class="modal__body-newuser-title">Регистрация нового пользователя</h2>
+                    <!-- Форма -->
+                    <form class="modal__body-newuser-form">
+                        <!-- Имя Фамилия -->
+                        <div class="modal__body-newuser-form-name">
+                            <div>   
+                                <h4 class="modal__body-newuser-form-title">Имя</h4>
+                                <input class="modal__body-newuser-form-input" type="text" placeholder="Игорь" name="username"> 
+                            </div>
+                            <div>
+                                <h4 class="modal__body-newuser-form-title">Фамилия</h4>
+                                <input class="modal__body-newuser-form-input" type="text" placeholder="Иванов" name="username">
+                            </div>
+                        </div>
+                        <!-- Эмейл -->
+                        <div class="modal__body-newuser-form-mail">
+                            <h4 class="modal__body-newuser-form-title">Почта</h4>
+                            <input class="modal__body-newuser-form-input" type="email" placeholder="mail@gmail.com" name="email">  
+                        </div>
+                        <!-- Телефон -->
+                        <div class="modal__body-newuser-form-number">
+                            <h4 class="modal__body-newuser-form-title">Номер телефона</h4>
+                            <input class="modal__body-newuser-form-input" type="tel" name="phone" placeholder="+ 380 095 35 35 355">
+                        </div>
+                        <!-- Пароль -->
+                        <div class="modal__body-newuser-form-password">
+                            <h4 class="modal__body-newuser-form-title">Пароль</h4>
+                            <div class="modal__body-newuser-form-password-wrapper">
+                                <input class="modal__body-newuser-form-input" type="password" name="phone" placeholder="password1234">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#eye"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Кнопки -->
+                        <div class="modal__body-newuser-form-buttons">
+                            <!-- Регистрация -->
+                            <input class="modal__body-newuser-form-buttons-reg" type="submit" value="Регистрация">
+                            <!-- Соц. Сети Гугл -->
+                            <div class="modal__body-newuser-form-buttons-wrapper">
+                                <a class="modal__body-newuser-form-buttons-google">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#google"></use>
+                                    </svg>
+                                </a>
+                                <a class="modal__body-newuser-form-buttons-social">
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#facebook-solo"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- С Возвращением! -->
+                <div id="comeback" class="modal__body-comeback">
+                    <!-- Заголовки -->
+                    <h3 class="modal__body-comeback-title">С возвращением!</h3>
+                    <p class="modal__body-comeback-subtitle">Мы так рады вас видеть снова</p>
+                    <!-- Форма -->
+                    <form class="modal__body-comeback-form">
+                        <div class="modal__body-comeback-form-mail">
+                            <h4 class="modal__body-comeback-form-title">Почта</h4>
+                            <input class="modal__body-comeback-form-input" type="email" placeholder="mail@gmail.com" name="email">  
+                        </div>
+                        <div class="modal__body-comeback-form-password">
+                            <h4 class="modal__body-newuser-form-title">Пароль</h4>
+                            <div class="modal__body-comeback-form-password-wrapper">
+                                <input class="modal__body-comeback-form-input" type="password" name="phone" placeholder="password1234">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#eye"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="modal__body-comeback-form-buttons">
+                            <!-- Регистрация -->
+                            <input class="modal__body-comeback-form-buttons-reg" type="submit" value="Войти">
+                            <!-- Соц. Сети Гугл -->
+                            <div class="modal__body-comeback-form-buttons-wrapper">
+                                <div class="modal__body-comeback-form-buttons-google">
+                                    <a href=""></a>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#facebook-solo"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal__body-comeback-form-buttons-social">
+                                    <a href=""></a>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#google"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>  <!-- Кнопки -->
+                    </form>
+                </div>     <!-- С Возвращением! -->
+            </div>     <!-- modalbody -->
+        <!-- Картинка -->
+    
+            <div class="modal__wrapper-image">
+                <img src="assets/img/modal/modal.jpg" alt="">
+            </div>
+    
+        </div>  <!-- wrapper -->
+    </section>    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/autosize.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/range.js"></script>
+    <script src="assets/js/app.min.js"></script></body>
+
+</html>
